@@ -165,7 +165,7 @@ export function PricingSection() {
             </Button>
           </div>
           <Button variant="outline" className="mt-4">
-            Try DocuChat Now
+            Try NexUp AI Now
           </Button>
         </div>
       </div>

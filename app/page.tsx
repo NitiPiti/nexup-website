@@ -4,6 +4,7 @@ import { Navigation } from "@/components/navigation"
 import { HeroSection3D } from "@/components/hero-section-3d"
 import { LogosMarquee } from "@/components/logos-marquee"
 import { ProcessSection } from "@/components/process-section"
+import { WhySection } from "@/components/why-section"
 import { FeaturesSection } from "@/components/features-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import IntegrationsSection from "@/components/integrations-section"
@@ -26,6 +27,7 @@ export default function Home() {
         
         <LogosMarquee />
         <ProcessSection />
+        <WhySection />
         <FeaturesSection />
         <TestimonialsSection />
         <IntegrationsSection />

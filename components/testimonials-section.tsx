@@ -25,14 +25,14 @@ export function TestimonialsSection() {
       name: "Sarah Johnson",
       role: "Customer Support Manager",
       company: "TechCorp",
-      content: "DocuChat has revolutionized our customer support. We've reduced response times by 80% and our customers love the instant, accurate answers.",
+      content: "NexUp AI has revolutionized our customer support. We've reduced response times by 80% and our customers love the instant, accurate answers.",
       rating: 5
     },
     {
       name: "Michael Chen",
       role: "IT Director",
       company: "InnovateLabs",
-      content: "The EU data residency was crucial for our compliance needs. DocuChat delivers enterprise-grade security with incredible ease of use.",
+      content: "The EU data residency was crucial for our compliance needs. NexUp AI delivers enterprise-grade security with incredible ease of use.",
       rating: 5
     },
     {
@@ -53,7 +53,7 @@ export function TestimonialsSection() {
             Real Results from Satisfied Customers
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12">
-            Join businesses that have transformed their customer support and internal processes with DocuChat.
+            Join businesses that have transformed their customer support and internal processes with NexUp AI.
           </p>
         </div>
 
@@ -75,7 +75,7 @@ export function TestimonialsSection() {
             User Testimonials
           </h3>
           <p className="text-lg text-gray-600 dark:text-gray-300">
-            Hear directly from our customers about their experience with DocuChat
+            Hear directly from our customers about their experience with NexUp AI
           </p>
         </div>
 
