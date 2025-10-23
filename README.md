@@ -1,10 +1,10 @@
 # NexUp AI
 
-A modern, responsive website clone of DocuChat built with Next.js, TypeScript, and Tailwind CSS. Features a beautiful hero section with 3D robot animation using Spline.
+A modern, responsive website built with Next.js, TypeScript, and Tailwind CSS. Features a beautiful hero section with 3D robot animation using Spline.
 
 ## Features
 
-- 🚀 **Modern Design**: Clean, professional design matching DocuChat's aesthetic
+- 🚀 **Modern Design**: Clean, professional design
 - 🤖 **3D Robot Animation**: Interactive 3D scene in the hero section using Spline
 - 📱 **Responsive**: Fully responsive design that works on all devices
 - ⚡ **Fast Performance**: Built with Next.js 14 and optimized for speed
@@ -122,7 +122,7 @@ The Spline scene can be replaced by updating the `scene` prop in the `SplineScen
 
 ## License
 
-This project is for educational purposes. The design is inspired by DocuChat's website.
+This project is for educational purposes.
 
 ## Contributing
 
