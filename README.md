@@ -1,4 +1,4 @@
-# DocuChat Clone
+# NexUp AI
 
 A modern, responsive website clone of DocuChat built with Next.js, TypeScript, and Tailwind CSS. Features a beautiful hero section with 3D robot animation using Spline.
 
