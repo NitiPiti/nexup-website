@@ -1,109 +1,208 @@
-import { Card } from "@/components/ui/card"
-import { Star, TrendingUp, Users, Clock } from "lucide-react"
+"use client";
+import { TimelineContent } from "@/components/ui/timeline-animation";
+import Image from "next/image";
+import { useRef } from "react";
 
 export function TestimonialsSection() {
-  const stats = [
-    {
-      icon: <TrendingUp className="h-8 w-8 text-[#418087]" />,
-      title: "Cost Savings Up to 70%",
-      description: "Cut support costs by automating responses to common inquiries. Chatbots resolve above 90% of questions without human intervention."
-    },
-    {
-      icon: <Star className="h-8 w-8 text-[#418087]" />,
-      title: "Satisfaction Rate Above 90%",
-      description: "End users consistently report high satisfaction, with over 90% of interactions rated positively."
-    },
-    {
-      icon: <Clock className="h-8 w-8 text-[#418087]" />,
-      title: "Implementation in 5 Minutes",
-      description: "Businesses are up and running with chatbots in mere minutes, thanks to our best-in-class user interface."
-    }
-  ]
+  const testimonialRef = useRef<HTMLDivElement>(null);
 
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Customer Support Manager",
-      company: "TechCorp",
-      content: "DocuChat has revolutionized our customer support. We've reduced response times by 80% and our customers love the instant, accurate answers.",
-      rating: 5
+  const revealVariants = {
+    visible: (i: number) => ({
+      y: 0,
+      opacity: 1,
+      filter: "blur(0px)",
+      transition: {
+        delay: i * 0.4,
+        duration: 0.5,
+      },
+    }),
+    hidden: {
+      filter: "blur(10px)",
+      y: -20,
+      opacity: 0,
     },
-    {
-      name: "Michael Chen",
-      role: "IT Director",
-      company: "InnovateLabs",
-      content: "The EU data residency was crucial for our compliance needs. DocuChat delivers enterprise-grade security with incredible ease of use.",
-      rating: 5
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "HR Manager",
-      company: "Global Solutions",
-      content: "Our internal knowledge base is now accessible 24/7. Employees can get instant answers to HR questions, saving hours every week.",
-      rating: 5
-    }
-  ]
+  };
 
   return (
-    <section className="py-20 bg-white dark:bg-gray-900">
-      <div className="container mx-auto px-4">
-        {/* Stats Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Real Results from Satisfied Customers
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12">
-            Join businesses that have transformed their customer support and internal processes with DocuChat.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-          {stats.map((stat, index) => (
-            <Card key={index} className="p-8 text-center hover:shadow-lg transition-shadow duration-300 dark:bg-gray-800 dark:border-gray-700">
-              <div className="flex flex-col items-center space-y-4">
-                {stat.icon}
-                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">{stat.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{stat.description}</p>
-              </div>
-            </Card>
-          ))}
-        </div>
-
-        {/* Testimonials Section */}
-        <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            User Testimonials
-          </h3>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
-            Hear directly from our customers about their experience with DocuChat
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <Card key={index} className="p-8 hover:shadow-lg transition-shadow duration-300 dark:bg-gray-800 dark:border-gray-700">
-              <div className="space-y-4">
-                <div className="flex items-center space-x-1">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
+    <main className="w-full bg-white dark:bg-gray-900">
+      <section className="relative h-full container text-black dark:text-white mx-auto rounded-lg py-14 bg-white dark:bg-gray-900" ref={testimonialRef}>
+        <article className={"max-w-screen-md mx-auto text-center space-y-2 "}>
+          <TimelineContent as="h1" className={"xl:text-4xl text-3xl font-medium"} animationNum={0} customVariants={revealVariants} timelineRef={testimonialRef}>
+            Trusted by Startups and the world's largest companies
+          </TimelineContent>
+          <TimelineContent as="p" className={"mx-auto text-gray-500 dark:text-gray-400"} animationNum={1} customVariants={revealVariants} timelineRef={testimonialRef}>
+            Let's hear how NexUp AI client's feels about our service
+          </TimelineContent>
+        </article>
+        <div className="lg:grid lg:grid-cols-3 gap-2 flex flex-col w-full lg:py-10 pt-10 pb-4 lg:px-10 px-4">
+          <div className="md:flex lg:flex-col lg:space-y-2 h-full lg:gap-0 gap-2 ">
+            <TimelineContent animationNum={0} customVariants={revealVariants} timelineRef={testimonialRef} className=" lg:flex-[7] flex-[6] flex flex-col justify-between relative bg-[#418087] overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 p-5">
+              <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:50px_56px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
+              <article className="mt-auto text-white">
+                <p>
+                  "NexUp AI has been a game-changer for us. Their service is
+                  top-notch and their team is incredibly responsive."
+                </p>
+                <div className="flex justify-between pt-5">
+                  <div>
+                    <h2 className=" font-semibold lg:text-xl text-sm">
+                      Guillermo Rauch
+                    </h2>
+                    <p className="">CEO of Enigma</p>
+                  </div>
+                  <Image
+                    src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=687&auto=format&fit=crop"
+                    alt="logo"
+                    width={200}
+                    height={200}
+                    className="w-16 h-16 rounded-xl object-cover"
+                  />
                 </div>
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">"{testimonial.content}"</p>
-                <div className="pt-4 border-t border-gray-200 dark:border-gray-600">
-                  <p className="font-semibold text-gray-900 dark:text-white">{testimonial.name}</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">{testimonial.role}, {testimonial.company}</p>
+              </article>
+            </TimelineContent>
+            <TimelineContent animationNum={1} customVariants={revealVariants} timelineRef={testimonialRef} className="lg:flex-[3] flex-[4] lg:h-fit lg:shrink-0 flex flex-col justify-between relative bg-white text-black overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 p-5">
+              <article className="mt-auto">
+                <p>
+                  "We've seen incredible results with NexUp AI. Their
+                  expertise, dedication."
+                </p>
+                <div className="flex justify-between pt-5">
+                  <div>
+                    <h2 className=" font-semibold text-xl">Rika Shinoda</h2>
+                    <p className="">CEO of Kintsugi</p>
+                  </div>
+                  <Image
+                    src="https://images.unsplash.com/photo-1512485694743-9c9538b4e6e0?q=80&w=687&auto=format&fit=crop"
+                    alt="logo"
+                    width={200}
+                    height={200}
+                    className="w-16 h-16 rounded-xl object-cover"
+                  />
                 </div>
-              </div>
-            </Card>
-          ))}
+              </article>
+            </TimelineContent>
+          </div>
+          <div className="lg:h-full md:flex lg:flex-col h-fit lg:space-y-2 lg:gap-0 gap-2">
+            <TimelineContent animationNum={2} customVariants={revealVariants} timelineRef={testimonialRef} className="flex flex-col justify-between relative bg-gray-800 text-white overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 p-5">
+              <article className="mt-auto">
+                <p className="2xl:text-base text-sm">
+                  "Their team is highly professional, and their innovative
+                  solutions have truly transformed the way we operate."
+                </p>
+                <div className="flex justify-between items-end pt-5">
+                  <div>
+                    <h2 className=" font-semibold lg:text-xl text-lg">
+                      Reacher{" "}
+                    </h2>
+                    <p className="lg:text-base text-sm">CEO of OdeaoLabs</p>
+                  </div>
+                  <Image
+                    src="https://images.unsplash.com/photo-1566753323558-f4e0952af115?q=80&w=1021&auto=format&fit=crop"
+                    alt="logo"
+                    width={200}
+                    height={200}
+                    className="lg:w-16 lg:h-16 w-12 h-12 rounded-xl object-cover"
+                  />
+                </div>
+              </article>
+            </TimelineContent>
+            <TimelineContent animationNum={3} customVariants={revealVariants} timelineRef={testimonialRef} className="flex flex-col justify-between relative bg-gray-800 text-white overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 p-5">
+              <article className="mt-auto">
+                <p className="2xl:text-base text-sm">
+                  "We're extremely satisfied with NexUp AI. Their expertise
+                  and dedication have exceeded our expectations."
+                </p>
+                <div className="flex justify-between items-end pt-5">
+                  <div>
+                    <h2 className=" font-semibold lg:text-xl text-lg">John </h2>
+                    <p className="lg:text-base text-sm">CEO of Labsbo</p>
+                  </div>
+                  <Image
+                    src="https://images.unsplash.com/photo-1615109398623-88346a601842?q=80&w=687&auto=format&fit=crop"
+                    alt="logo"
+                    width={200}
+                    height={200}
+                    className="lg:w-16 lg:h-16 w-12 h-12 rounded-xl object-cover"
+                  />
+                </div>
+              </article>
+            </TimelineContent>
+            <TimelineContent animationNum={4} customVariants={revealVariants} timelineRef={testimonialRef} className="flex flex-col justify-between relative bg-gray-800 text-white overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 p-5">
+              <article className="mt-auto">
+                <p className="2xl:text-base text-sm">
+                  "Their customer support is absolutely exceptional. They are
+                  always available, incredibly helpful."
+                </p>
+                <div className="flex justify-between items-end pt-5">
+                  <div>
+                    <h2 className=" font-semibold lg:text-xl text-lg">
+                      Steven Sunny
+                    </h2>
+                    <p className="lg:text-base text-sm">CEO of boxefi</p>
+                  </div>
+                  <Image
+                    src="https://images.unsplash.com/photo-1740102074295-c13fae3e4f8a?q=80&w=687&auto=format&fit=crop"
+                    alt="logo"
+                    width={200}
+                    height={200}
+                    className="lg:w-16 lg:h-16 w-12 h-12 rounded-xl object-cover"
+                  />
+                </div>
+              </article>
+            </TimelineContent>
+          </div>
+          <div className="h-full md:flex lg:flex-col lg:space-y-2 lg:gap-0 gap-2">
+            <TimelineContent animationNum={5} customVariants={revealVariants} timelineRef={testimonialRef} className=" lg:flex-[3] flex-[4] flex flex-col justify-between relative bg-white text-black overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 p-5">
+              <article className="mt-auto">
+                <p>
+                  "NexUp AI has been a key partner in our growth journey."
+                </p>
+                <div className="flex justify-between pt-5">
+                  <div>
+                    <h2 className=" font-semibold text-xl">Guillermo Rauch</h2>
+                    <p className="">CEO of OdeaoLabs</p>
+                  </div>
+                  <Image
+                    src="https://images.unsplash.com/photo-1563237023-b1e970526dcb?q=80&w=765&auto=format&fit=crop"
+                    alt="logo"
+                    width={200}
+                    height={200}
+                    className="w-16 h-16 rounded-xl object-cover"
+                  />
+                </div>
+              </article>
+            </TimelineContent>
+            <TimelineContent animationNum={6} customVariants={revealVariants} timelineRef={testimonialRef} className="lg:flex-[7] flex-[6] flex flex-col justify-between relative bg-[#418087] overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 p-5">
+              <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:50px_56px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
+              <article className="mt-auto text-white">
+                <p>
+                  "NexUp AI has been a true game-changer for us. Their
+                  exceptional service, combined with their deep expertise and
+                  commitment to excellence, has made a significant impact on our
+                  business."
+                </p>
+                <div className="flex justify-between pt-5">
+                  <div>
+                    <h2 className=" font-semibold text-xl">Paul Brauch</h2>
+                    <p className="">CTO of Spectrum</p>
+                  </div>
+                  <Image
+                    src="https://images.unsplash.com/photo-1590086782957-93c06ef21604?q=80&w=687&auto=format&fit=crop"
+                    alt="logo"
+                    width={200}
+                    height={200}
+                    className="w-16 h-16 rounded-xl object-cover"
+                  />
+                </div>
+              </article>
+            </TimelineContent>
+          </div>
         </div>
 
-        <div className="text-center mt-12 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-          <p className="text-sm text-gray-600 dark:text-gray-300">
-            All based on real-world data from our feedback logs and customer surveys.
-          </p>
+        <div className="absolute border-b-2 border-[#e6e6e6] dark:border-gray-600 bottom-4 h-16 z-[2] md:w-full w-[90%] md:left-0 left-[5%]">
+          <div className="container mx-auto w-full h-full relative before:absolute before:-left-2 before:-bottom-2 before:w-4 before:h-4 before:bg-white dark:before:bg-gray-900 before:shadow-sm before:border border-gray-200 dark:border-gray-700 before:border-gray-300 dark:before:border-gray-600 after:absolute after:-right-2 after:-bottom-2 after:w-4 after:h-4 after:bg-white dark:after:bg-gray-900 after:shadow-sm after:border after:border-gray-300 dark:after:border-gray-600"></div>
         </div>
-      </div>
-    </section>
-  )
+      </section>
+    </main>
+  );
 }

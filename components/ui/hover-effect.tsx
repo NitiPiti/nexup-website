@@ -68,10 +68,10 @@ export const HoverEffect = ({
             <CardContent className="p-4 relative z-10">
               <div className="flex flex-col items-center text-center space-y-4">
                 {item.icon}
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
                   {item.description}
                 </p>
               </div>

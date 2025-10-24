@@ -1,51 +1,112 @@
-import { Card } from "@/components/ui/card"
-import { Upload, Settings, BarChart3 } from "lucide-react"
+import { Timeline } from "@/components/ui/timeline"
+import { ChatInterface } from "@/components/ui/chat-interface"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Upload, Settings, BarChart3, Database } from "lucide-react"
 
 export function ProcessSection() {
-  const steps = [
+  const timelineData = [
     {
-      icon: <Upload className="h-12 w-12 text-[#418087]" />,
-      title: "Import Resources",
-      description: "Upload documents or sync websites and Google Drive folders instantly. Add as many as you like, in any language."
+      title: "Data Collection",
+      content: (
+        <Card className="max-w-md">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Upload className="h-6 w-6 text-[#418087]" />
+              Import Your Resources
+            </CardTitle>
+            <CardDescription>Upload documents, sync websites, or connect Google Drive</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm text-gray-600 dark:text-gray-300">
+              Easily import your existing knowledge base with support for multiple formats including PDFs, Word docs, web pages, and more. Our system automatically processes and indexes your content for optimal AI performance.
+            </p>
+          </CardContent>
+        </Card>
+      )
     },
     {
-      icon: <Settings className="h-12 w-12 text-[#418087]" />,
-      title: "Customize & Refine",
-      description: "Personalize every aspect of your chatbot, from visual style to conversational logic. No coding required."
+      title: "AI Training",
+      content: (
+        <Card className="max-w-md">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Database className="h-6 w-6 text-[#418087]" />
+              Smart Processing
+            </CardTitle>
+            <CardDescription>Advanced AI analyzes and understands your content</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm text-gray-600 dark:text-gray-300">
+              Our sophisticated AI algorithms process your content, understanding context, relationships, and key concepts to create an intelligent knowledge base that can answer complex questions accurately.
+            </p>
+          </CardContent>
+        </Card>
+      )
     },
     {
-      icon: <BarChart3 className="h-12 w-12 text-[#418087]" />,
-      title: "Deploy & Analyze",
-      description: "Embed on your site or share via link. Monitor performance with in-depth analytics to continually improve user satisfaction."
+      title: "Customization",
+      content: (
+        <Card className="max-w-md">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Settings className="h-6 w-6 text-[#418087]" />
+              Personalize Your Bot
+            </CardTitle>
+            <CardDescription>Customize appearance, behavior, and responses</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm text-gray-600 dark:text-gray-300">
+              Tailor your chatbot's personality, visual design, and response style to match your brand. Set up custom workflows, integrate with your existing systems, and configure advanced features.
+            </p>
+          </CardContent>
+        </Card>
+      )
+    },
+    {
+      title: "Deployment",
+      content: (
+        <Card className="max-w-md">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <BarChart3 className="h-6 w-6 text-[#418087]" />
+              Go Live
+            </CardTitle>
+            <CardDescription>Deploy across multiple channels instantly</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm text-gray-600 dark:text-gray-300">
+              Launch your AI chatbot on your website, mobile app, or messaging platforms. Monitor performance with detailed analytics and continuously improve based on user interactions.
+            </p>
+          </CardContent>
+        </Card>
+      )
     }
   ]
 
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-900">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Transform Your Support in Minutes
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Set up your AI chatbots effortlessly and start saving time and resources immediately. Here's how we help you get there:
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {steps.map((step, index) => (
-            <Card key={index} className="p-8 text-center hover:shadow-lg transition-shadow duration-300 dark:bg-gray-800 dark:border-gray-700">
-              <div className="flex flex-col items-center space-y-6">
-                <div className="bg-gray-100 dark:bg-gray-700 rounded-full p-4">
-                  {step.icon}
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">{step.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{step.description}</p>
-              </div>
-            </Card>
-          ))}
+    <section id="process" className="bg-gray-50 dark:bg-gray-900">
+      {/* Chat Interface Section */}
+      <div className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              Try It Live
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Experience NexUp AI in action. Chat with our demo assistant across different support categories and see how it can transform your business operations.
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="h-[600px]">
+              <ChatInterface />
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* Timeline Section */}
+      <Timeline data={timelineData} />
     </section>
   )
 }
