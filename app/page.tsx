@@ -6,6 +6,7 @@ import { LogosMarquee } from "@/components/logos-marquee"
 import { ProcessSection } from "@/components/process-section"
 import { WhySection } from "@/components/why-section"
 import { FeaturesSection } from "@/components/features-section"
+import { ComplianceSection } from "@/components/compliance-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import IntegrationsSection from "@/components/integrations-section"
 import { Footer } from "@/components/footer"
@@ -29,6 +30,7 @@ export default function Home() {
         <ProcessSection />
         <WhySection />
         <FeaturesSection />
+        <ComplianceSection />
         <TestimonialsSection />
         <IntegrationsSection />
         <Footer />
