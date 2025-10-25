@@ -86,19 +86,19 @@ export function ProcessSection() {
   return (
     <section id="process" className="bg-gray-50 dark:bg-gray-900">
       {/* Chat Interface Section */}
-      <div className="py-20">
+      <div className="py-12">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Try It Live
+          <div className="text-center mb-8">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+              From Data to Intelligence
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Experience NexUp AI in action. Chat with our demo assistant across different support categories and see how it can transform your business operations.
+            <p className="text-xl text-gray-600 dark:text-gray-300">
+              Chatbot AI Demo
             </p>
           </div>
           
-          <div className="max-w-4xl mx-auto">
-            <div className="h-[600px]">
+          <div className="h-[600px] flex items-center justify-center">
+            <div className="h-[500px] w-full max-w-4xl mx-auto">
               <ChatInterface />
             </div>
           </div>
