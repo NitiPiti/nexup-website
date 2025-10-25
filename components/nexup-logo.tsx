@@ -23,13 +23,23 @@ export function NexUpLogo({ className, variant = 'default' }: NexUpLogoProps) {
 
   return (
     <Link href="/" className={cn('flex items-center hover:opacity-80 transition-opacity duration-200', className)}>
-      {/* Logo Image */}
+      {/* Light Mode Logo */}
       <Image
         src="/images/logo.png"
         alt="NexUp AI Logo"
         width={200}
         height={60}
-        className="h-12 w-auto"
+        className="h-12 w-auto dark:hidden"
+        priority
+      />
+      
+      {/* Dark Mode Logo */}
+      <Image
+        src="/images/logo-dark.png"
+        alt="NexUp AI Logo Dark"
+        width={200}
+        height={60}
+        className="h-12 w-auto hidden dark:block"
         priority
       />
     </Link>
