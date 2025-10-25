@@ -20,6 +20,9 @@ const nextConfig = {
     }
     return config
   },
+  // Uncomment the following lines for static export (GitHub Pages)
+  // output: 'export',
+  // trailingSlash: true,
 }
 
 module.exports = nextConfig
