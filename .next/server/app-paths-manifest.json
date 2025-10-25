@@ -1,5 +1,13 @@
 {
-  "/solutions/banking/page": "app/solutions/banking/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/demo/page": "app/demo/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/faq/page": "app/faq/page.js",
+  "/page": "app/page.js",
+  "/solutions/education/page": "app/solutions/education/page.js",
   "/pricing/page": "app/pricing/page.js",
-  "/page": "app/page.js"
+  "/solutions/healthcare/page": "app/solutions/healthcare/page.js",
+  "/solutions/banking/page": "app/solutions/banking/page.js",
+  "/solutions/insurance/page": "app/solutions/insurance/page.js",
+  "/solutions/public-sector/page": "app/solutions/public-sector/page.js"
 }

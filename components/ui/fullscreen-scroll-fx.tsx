@@ -257,7 +257,7 @@ export const FullScreenScrollFX = forwardRef<HTMLDivElement, FullScreenFXProps>(
         end: "bottom bottom",
         pin: fixed,
         pinSpacing: true,
-        onUpdate: (self) => {
+        onUpdate: (self: any) => {
           if (motionOff || isSnappingRef.current) return;
           const prog = self.progress;
           const target = Math.min(total - 1, Math.floor(prog * total));
