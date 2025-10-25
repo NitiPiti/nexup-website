@@ -9,7 +9,7 @@ import { WhySection } from "@/components/why-section"
 import { FeaturesSection } from "@/components/features-section"
 import { ComplianceSection } from "@/components/compliance-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
-import IntegrationsSection from "@/components/integrations-section"
+// import IntegrationsSection from "@/components/integrations-section"
 import { Footer } from "@/components/footer"
 import { ShadowOverlay } from "@/components/ui/shadow-overlay"
 
@@ -34,7 +34,7 @@ export default function Home() {
         <FeaturesSection />
         <ComplianceSection />
         <TestimonialsSection />
-        <IntegrationsSection />
+        {/* <IntegrationsSection /> */}
         <Footer />
       </div>
     </div>
