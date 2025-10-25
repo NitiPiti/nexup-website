@@ -67,10 +67,11 @@ export function TimelineContent({
 
   const variants = customVariants || defaultVariants;
 
+  const MotionComponent = motion[Component as keyof typeof motion] as any;
+  
   return (
-    <motion.div
+    <MotionComponent
       ref={ref}
-      as={Component}
       className={className}
       variants={variants}
       initial="hidden"
@@ -78,7 +79,7 @@ export function TimelineContent({
       custom={animationNum}
     >
       {children}
-    </motion.div>
+    </MotionComponent>
   );
 }
 

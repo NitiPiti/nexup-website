@@ -11,6 +11,15 @@ const nextConfig = {
       },
     ],
   },
+  experimental: {
+    esmExternals: 'loose',
+  },
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.externals = [...config.externals, 'spline', 'gsap']
+    }
+    return config
+  },
 }
 
 module.exports = nextConfig
