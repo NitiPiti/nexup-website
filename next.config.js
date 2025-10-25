@@ -16,7 +16,7 @@ const nextConfig = {
   },
   webpack: (config, { isServer }) => {
     if (isServer) {
-      config.externals = [...config.externals, 'spline', 'gsap']
+      config.externals = [...config.externals, 'spline']
     }
     return config
   },
