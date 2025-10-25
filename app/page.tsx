@@ -1,6 +1,7 @@
 'use client'
 
 import { Navigation } from "@/components/navigation"
+import { LampDemo } from "@/components/ui/lamp-demo"
 import { HeroSection3D } from "@/components/hero-section-3d"
 import { LogosMarquee } from "@/components/logos-marquee"
 import { ProcessSection } from "@/components/process-section"
@@ -16,6 +17,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Navigation />
+      
       <HeroSection3D />
       
       {/* Background for all sections except hero */}

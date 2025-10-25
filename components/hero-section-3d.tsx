@@ -1,20 +1,20 @@
 'use client'
 
-import { SplineScene } from "@/components/ui/splite";
-import { Card } from "@/components/ui/card"
+import { SplineScene } from "@/components/ui/splite"
 import { Spotlight } from "@/components/ui/spotlight"
 import { AnimatedBackground } from "@/components/animated-background"
+import { Card } from "@/components/ui/card"
  
 export function HeroSection3D() {
   return (
-    <div className="relative min-h-screen bg-black">
+    <div className="relative min-h-screen bg-black w-full overflow-hidden">
       <AnimatedBackground />
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"
       />
       
-      <div className="container mx-auto px-4 py-20">
+      <div className="w-full px-4 py-20 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Left content */}
           <div className="flex-1 space-y-8">
@@ -42,21 +42,27 @@ export function HeroSection3D() {
             </div>
           </div>
 
-          {/* Right content - Full 3D Animation */}
-          <div className="flex-1 w-full max-w-4xl">
-            <Card className="w-full h-[600px] bg-black/[0.96] relative overflow-hidden">
+          {/* Right content - 3D Robot Animation */}
+          <div className="flex-1 w-full max-w-4xl relative z-10">
+            <Card className="w-full h-[600px] bg-black/[0.96] relative overflow-hidden border-2 border-white rounded-lg">
               <Spotlight
                 className="-top-40 left-0 md:left-60 md:-top-20"
                 fill="white"
               />
               
-              {/* Full 3D Animation covering the entire card */}
+              {/* Blue glow effect at the top */}
+              <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-transparent via-blue-400 to-transparent opacity-60 z-10"></div>
+              
+              {/* Spline 3D Robot Animation */}
               <div className="w-full h-full">
                 <SplineScene 
                   scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
                   className="w-full h-full"
                 />
               </div>
+              
+              {/* Subtle blue glow overlay */}
+              <div className="absolute inset-0 bg-gradient-to-b from-blue-500/10 via-transparent to-transparent pointer-events-none"></div>
             </Card>
           </div>
         </div>
