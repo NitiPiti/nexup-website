@@ -1,3 +1,5 @@
 {
+  "/solutions/banking/page": "app/solutions/banking/page.js",
+  "/pricing/page": "app/pricing/page.js",
   "/page": "app/page.js"
 }
