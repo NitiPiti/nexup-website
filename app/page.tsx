@@ -16,8 +16,17 @@ import { useEffect } from "react"
 
 export default function Home() {
   useEffect(() => {
-    // Only scroll to top if there's no hash in the URL (direct page load)
-    if (!window.location.hash) {
+    // Handle scroll behavior based on URL hash
+    if (window.location.hash) {
+      // If there's a hash, scroll to the specific element after a short delay
+      setTimeout(() => {
+        const element = document.querySelector(window.location.hash)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 100)
+    } else {
+      // If no hash, scroll to top
       window.scrollTo(0, 0)
     }
   }, [])
