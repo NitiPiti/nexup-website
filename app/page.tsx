@@ -12,8 +12,15 @@ import { TestimonialsSection } from "@/components/testimonials-section"
 // import IntegrationsSection from "@/components/integrations-section"
 import { Footer } from "@/components/footer"
 import { ShadowOverlay } from "@/components/ui/shadow-overlay"
+import { useEffect } from "react"
 
 export default function Home() {
+  useEffect(() => {
+    // Only scroll to top if there's no hash in the URL (direct page load)
+    if (!window.location.hash) {
+      window.scrollTo(0, 0)
+    }
+  }, [])
   return (
     <div className="min-h-screen">
       <Navigation />

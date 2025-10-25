@@ -50,8 +50,8 @@ export function HeroSection3D() {
                 fill="white"
               />
               
-              {/* Blue glow effect at the top */}
-              <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-transparent via-blue-400 to-transparent opacity-60 z-10"></div>
+              {/* Dark glow effect at the top */}
+              <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-transparent via-gray-400 to-transparent opacity-60 z-10"></div>
               
               {/* Spline 3D Robot Animation */}
               <div className="w-full h-full">
@@ -61,8 +61,8 @@ export function HeroSection3D() {
                 />
               </div>
               
-              {/* Subtle blue glow overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-blue-500/10 via-transparent to-transparent pointer-events-none"></div>
+              {/* Subtle dark glow overlay */}
+              <div className="absolute inset-0 bg-gradient-to-b from-gray-500/10 via-transparent to-transparent pointer-events-none"></div>
             </Card>
           </div>
         </div>

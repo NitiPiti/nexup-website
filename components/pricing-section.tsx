@@ -76,7 +76,7 @@ export function PricingSection() {
             <button
               onClick={() => setIsYearly(!isYearly)}
               className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                isYearly ? 'bg-blue-600' : 'bg-gray-300'
+                isYearly ? 'bg-[#418087]' : 'bg-gray-300'
               }`}
             >
               <span
@@ -96,7 +96,7 @@ export function PricingSection() {
             <Card 
               key={index} 
               className={`p-8 relative hover:shadow-lg transition-shadow duration-300 ${
-                plan.popular ? 'ring-2 ring-blue-500 shadow-lg' : ''
+                plan.popular ? 'ring-2 ring-[#418087] shadow-lg' : ''
               }`}
             >
               {plan.popular && (
