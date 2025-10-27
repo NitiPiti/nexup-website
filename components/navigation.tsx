@@ -1,6 +1,7 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
+import { StarButton } from "@/components/ui/star-button"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { useState } from "react"
 import { NexUpLogo } from "./nexup-logo"
@@ -66,9 +67,7 @@ export function Navigation() {
             </div>
             
             <ThemeToggle />
-            <Button className="bg-[#418087] hover:bg-[#3a7379] text-white">
-              Upgrade to NexUp AI
-            </Button>
+            <StarButton text="Upgrade to NexUp AI" />
           </div>
 
           {/* Mobile Menu Button */}
@@ -113,9 +112,7 @@ export function Navigation() {
                 <span className="text-gray-600 dark:text-gray-300">Theme</span>
                 <ThemeToggle />
               </div>
-              <Button className="bg-[#418087] hover:bg-[#3a7379] text-white w-full">
-                Upgrade to NexUp AI
-              </Button>
+              <StarButton text="Upgrade to NexUp AI" />
             </div>
           </div>
         )}

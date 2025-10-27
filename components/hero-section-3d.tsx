@@ -9,6 +9,13 @@ export function HeroSection3D() {
   return (
     <div className="relative min-h-screen bg-black w-full overflow-hidden">
       <AnimatedBackground />
+      
+      {/* Teal light background - top positioned with downward expansion */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#418087]/40 via-[#418087]/20 to-transparent from-0% via-30% to-100%" />
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[600px] h-[400px] bg-[#418087]/30 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[400px] h-[300px] bg-[#418087]/50 rounded-full blur-2xl" />
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[200px] h-[150px] bg-[#418087]/60 rounded-full blur-xl" />
+      
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"

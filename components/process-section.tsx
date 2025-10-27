@@ -1,6 +1,7 @@
 import { Timeline } from "@/components/ui/timeline"
 import { ChatInterface } from "@/components/ui/chat-interface"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { FlowButton } from "@/components/ui/flow-button"
 import { Upload, Settings, BarChart3, Database } from "lucide-react"
 
 export function ProcessSection() {
@@ -89,12 +90,12 @@ export function ProcessSection() {
       <div className="py-12">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               From Data to Intelligence
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
-              Chatbot AI Demo
-            </p>
+            <div className="flex justify-center">
+              <FlowButton text="Try Pro for free" />
+            </div>
           </div>
           
           <div className="h-[600px] flex items-center justify-center">
