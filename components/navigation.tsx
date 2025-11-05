@@ -83,14 +83,14 @@ export function Navigation() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200 dark:border-gray-700">
             <div className="flex flex-col space-y-4">
-              <a href="/#why" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Why</a>
-              <a href="/#features" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Features</a>
-              <a href="/pricing" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Pricing</a>
+              <a href="/#why" className="text-base text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Why</a>
+              <a href="/#features" className="text-base text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Features</a>
+              <a href="/pricing" className="text-base text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Pricing</a>
               
               {/* Solutions Section */}
               <div>
                 <button
-                  className="flex items-center justify-between w-full text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+                  className="flex items-center justify-between w-full text-base text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors py-2"
                   onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
                 >
                   <span>Solutions</span>
@@ -99,20 +99,22 @@ export function Navigation() {
                 
                 {isSolutionsOpen && (
                   <div className="ml-4 mt-2 space-y-2">
-                    <a href="/solutions/banking" className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Banking and Finance</a>
-                    <a href="/solutions/healthcare" className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Health Care</a>
-                    <a href="/solutions/insurance" className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Insurance</a>
-                    <a href="/solutions/public-sector" className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Public Sector</a>
-                    <a href="/solutions/education" className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Higher Education</a>
+                    <a href="/solutions/banking" className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors py-1.5" onClick={() => setIsMenuOpen(false)}>Banking and Finance</a>
+                    <a href="/solutions/healthcare" className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors py-1.5" onClick={() => setIsMenuOpen(false)}>Health Care</a>
+                    <a href="/solutions/insurance" className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors py-1.5" onClick={() => setIsMenuOpen(false)}>Insurance</a>
+                    <a href="/solutions/public-sector" className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors py-1.5" onClick={() => setIsMenuOpen(false)}>Public Sector</a>
+                    <a href="/solutions/education" className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors py-1.5" onClick={() => setIsMenuOpen(false)}>Higher Education</a>
                   </div>
                 )}
               </div>
               
-              <div className="flex items-center justify-between">
-                <span className="text-gray-600 dark:text-gray-300">Theme</span>
+              <div className="flex items-center justify-between py-2">
+                <span className="text-base text-gray-600 dark:text-gray-300">Theme</span>
                 <ThemeToggle />
               </div>
-              <StarButton text="Upgrade to NexUp AI" />
+              <div className="pt-2" onClick={() => setIsMenuOpen(false)}>
+                <StarButton text="Upgrade to NexUp AI" />
+              </div>
             </div>
           </div>
         )}

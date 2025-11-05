@@ -87,10 +87,10 @@ export function ProcessSection() {
   return (
     <section id="process" className="bg-gray-50 dark:bg-gray-900">
       {/* Chat Interface Section */}
-      <div className="py-12">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+      <div className="py-8 sm:py-12">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-6 sm:mb-8">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
               From Data to Intelligence
             </h2>
             <div className="flex justify-center">
@@ -98,8 +98,8 @@ export function ProcessSection() {
             </div>
           </div>
           
-          <div className="h-[600px] flex items-center justify-center">
-            <div className="h-[500px] w-full max-w-4xl mx-auto">
+          <div className="h-[400px] sm:h-[500px] lg:h-[600px] flex items-center justify-center">
+            <div className="h-full w-full max-w-4xl mx-auto">
               <ChatInterface />
             </div>
           </div>

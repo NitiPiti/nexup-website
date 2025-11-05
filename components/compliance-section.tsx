@@ -3,31 +3,31 @@ import { useId } from "react";
 
 export function ComplianceSection() {
   return (
-    <section className="py-20 bg-white dark:bg-gray-900">
-      <div className="container mx-auto px-4">
+    <section className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-gray-900">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+        <div className="text-center mb-10 sm:mb-14 lg:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
             Enterprise-Grade Security & Compliance
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
             Trust NexUp AI with your most sensitive data. We maintain the highest security standards and regulatory compliance to protect your business.
           </p>
         </div>
 
         {/* Compliance Cards */}
-        <div className="py-8 lg:py-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-2 max-w-7xl mx-auto">
+        <div className="py-6 sm:py-8 lg:py-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-2 max-w-7xl mx-auto">
             {grid.map((feature) => (
               <div
                 key={feature.title}
-                className="relative bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white p-6 rounded-3xl overflow-hidden"
+                className="relative bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white p-5 sm:p-6 rounded-2xl sm:rounded-3xl overflow-hidden"
               >
                 <Grid size={20} />
-                <p className="text-base font-bold text-neutral-800 dark:text-white relative z-20">
+                <p className="text-sm sm:text-base font-bold text-neutral-800 dark:text-white relative z-20">
                   {feature.title}
                 </p>
-                <p className="text-neutral-600 dark:text-neutral-400 mt-4 text-base font-normal relative z-20">
+                <p className="text-neutral-600 dark:text-neutral-400 mt-3 sm:mt-4 text-sm sm:text-base font-normal relative z-20">
                   {feature.description}
                 </p>
               </div>

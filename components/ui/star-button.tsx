@@ -6,11 +6,11 @@ const StarButton = ({ text = "Button" }: { text?: string }) => {
   return (
     <button
       className="
-        group relative px-[35px] py-[12px] 
-        text-[17px] font-medium 
+        group relative px-6 sm:px-8 md:px-[35px] py-2.5 sm:py-3 md:py-[12px] 
+        text-sm sm:text-base md:text-[17px] font-medium 
         text-white 
         bg-[#418087] 
-        border-[3px] border-[#418087] 
+        border-[2px] sm:border-[3px] border-[#418087] 
         rounded-md 
         shadow-[0_0_0_#4180878c] 
         transition-all duration-300 ease-in-out 

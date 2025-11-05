@@ -91,10 +91,10 @@ export function LogosMarquee() {
   const arr = [Logos.tailwindcss, Logos.framer, Logos.nextjs, Logos.aws]
 
   return (
-    <div className="py-16 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
-          <p className="text-sm text-gray-600 dark:text-gray-400 font-medium">
+    <div className="py-12 sm:py-16 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-6 sm:mb-8">
+          <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 font-medium">
             Trusted by leading companies
           </p>
         </div>
@@ -102,7 +102,7 @@ export function LogosMarquee() {
           {arr.map((Logo, index) => (
             <div
               key={index}
-              className="relative h-full w-fit mx-[4rem] flex items-center justify-start"
+              className="relative h-full w-fit mx-8 sm:mx-12 md:mx-[4rem] flex items-center justify-start"
             >
               <Logo />
             </div>

@@ -25,16 +25,16 @@ export function TestimonialsSection() {
 
   return (
     <main className="w-full bg-white dark:bg-gray-900">
-      <section className="relative h-full container text-black dark:text-white mx-auto rounded-lg py-14 bg-white dark:bg-gray-900" ref={testimonialRef}>
-        <article className={"max-w-screen-md mx-auto text-center space-y-2 "}>
-          <TimelineContent as="h1" className={"xl:text-4xl text-3xl font-medium"} animationNum={0} customVariants={revealVariants} timelineRef={testimonialRef}>
+      <section className="relative h-full container text-black dark:text-white mx-auto rounded-lg py-8 sm:py-12 lg:py-14 bg-white dark:bg-gray-900" ref={testimonialRef}>
+        <article className={"max-w-screen-md mx-auto text-center space-y-2 px-4 "}>
+          <TimelineContent as="h1" className={"text-2xl sm:text-3xl xl:text-4xl font-medium"} animationNum={0} customVariants={revealVariants} timelineRef={testimonialRef}>
             Trusted by Startups and the world's largest companies
           </TimelineContent>
-          <TimelineContent as="p" className={"mx-auto text-gray-500 dark:text-gray-400"} animationNum={1} customVariants={revealVariants} timelineRef={testimonialRef}>
+          <TimelineContent as="p" className={"mx-auto text-sm sm:text-base text-gray-500 dark:text-gray-400"} animationNum={1} customVariants={revealVariants} timelineRef={testimonialRef}>
             Let's hear how NexUp AI client's feels about our service
           </TimelineContent>
         </article>
-        <div className="lg:grid lg:grid-cols-3 gap-2 flex flex-col w-full lg:py-10 pt-10 pb-4 lg:px-10 px-4">
+        <div className="lg:grid lg:grid-cols-3 gap-3 sm:gap-2 flex flex-col w-full lg:py-10 pt-6 sm:pt-10 pb-4 lg:px-10 px-4 sm:px-6">
           <div className="md:flex lg:flex-col lg:space-y-2 h-full lg:gap-0 gap-2 ">
             <TimelineContent animationNum={0} customVariants={revealVariants} timelineRef={testimonialRef} className=" lg:flex-[7] flex-[6] flex flex-col justify-between relative bg-[#418087] overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 p-5">
               <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:50px_56px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>

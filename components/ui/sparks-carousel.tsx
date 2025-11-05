@@ -131,21 +131,21 @@ export const SparksCarousel = React.forwardRef<
             {items.map((item, index) => (
               <motion.div
                 key={item.id}
-                className="group w-[320px] h-[280px] flex-shrink-0"
+                className="group w-[280px] sm:w-[300px] md:w-[320px] h-[260px] sm:h-[280px] flex-shrink-0"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div className="overflow-hidden rounded-lg border bg-card text-card-foreground shadow-sm transition-shadow hover:shadow-md h-full">
-                  <div className="p-6 h-full flex flex-col">
-                    <div className="flex flex-col items-center text-center space-y-4 flex-1">
-                      <div className="p-4 bg-[#418087]/10 rounded-full">
+                  <div className="p-4 sm:p-6 h-full flex flex-col">
+                    <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4 flex-1">
+                      <div className="p-3 sm:p-4 bg-[#418087]/10 rounded-full">
                         {item.icon}
                       </div>
-                      <h3 className="text-lg font-semibold leading-tight text-card-foreground">
+                      <h3 className="text-base sm:text-lg font-semibold leading-tight text-card-foreground">
                         {item.title}
                       </h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed flex-1">
                         {item.description}
                       </p>
                     </div>
@@ -160,22 +160,22 @@ export const SparksCarousel = React.forwardRef<
             <button
               onClick={() => scroll("left")}
               className={cn(
-                "absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-background/60 backdrop-blur-sm border text-foreground shadow-md transition-opacity hover:bg-background/80 disabled:opacity-0"
+                "absolute left-0 sm:left-2 top-1/2 -translate-y-1/2 z-10 p-1.5 sm:p-2 rounded-full bg-background/80 backdrop-blur-sm border text-foreground shadow-md transition-opacity hover:bg-background/90 disabled:opacity-0"
               )}
               aria-label="Scroll left"
             >
-              <ChevronLeft className="h-6 w-6" />
+              <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
             </button>
           )}
           {!isAtEnd && (
             <button
               onClick={() => scroll("right")}
               className={cn(
-                "absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-background/60 backdrop-blur-sm border text-foreground shadow-md transition-opacity hover:bg-background/80 disabled:opacity-0"
+                "absolute right-0 sm:right-2 top-1/2 -translate-y-1/2 z-10 p-1.5 sm:p-2 rounded-full bg-background/80 backdrop-blur-sm border text-foreground shadow-md transition-opacity hover:bg-background/90 disabled:opacity-0"
               )}
               aria-label="Scroll right"
             >
-              <ChevronRight className="h-6 w-6" />
+              <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
             </button>
           )}
         </div>

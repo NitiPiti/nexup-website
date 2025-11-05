@@ -5,8 +5,8 @@ import { NexUpLogo } from "./nexup-logo"
 export function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-6 lg:gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -64,27 +64,29 @@ export function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
+        <div className="border-t border-gray-800 mt-8 sm:mt-12 pt-6 sm:pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
-              <p className="text-gray-400 text-sm">
+            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-center md:text-left">
+              <p className="text-gray-400 text-xs sm:text-sm">
                 © 2025 NexUp AI Limited. All rights reserved.
               </p>
-              <div className="flex space-x-6">
-                <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy</a>
-                <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Terms</a>
-                <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Trust Center</a>
+              <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+                <a href="#" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors">Privacy</a>
+                <a href="#" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors">Terms</a>
+                <a href="#" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors">Trust Center</a>
               </div>
             </div>
             
-            <div className="flex items-center space-x-4">
-              <Button variant="outline" size="sm" className="border-gray-700 text-gray-300 hover:bg-gray-800">
-                <Twitter className="h-4 w-4 mr-2" />
-                Go to Twitter Profile
+            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto">
+              <Button variant="outline" size="sm" className="border-gray-700 text-gray-300 hover:bg-gray-800 w-full sm:w-auto text-xs sm:text-sm">
+                <Twitter className="h-3 w-3 sm:h-4 sm:w-4 mr-2" />
+                <span className="hidden sm:inline">Go to Twitter Profile</span>
+                <span className="sm:hidden">Twitter</span>
               </Button>
-              <Button variant="outline" size="sm" className="border-gray-700 text-gray-300 hover:bg-gray-800">
-                <Mail className="h-4 w-4 mr-2" />
-                Send Email to Developer
+              <Button variant="outline" size="sm" className="border-gray-700 text-gray-300 hover:bg-gray-800 w-full sm:w-auto text-xs sm:text-sm">
+                <Mail className="h-3 w-3 sm:h-4 sm:w-4 mr-2" />
+                <span className="hidden sm:inline">Send Email to Developer</span>
+                <span className="sm:hidden">Email</span>
               </Button>
             </div>
           </div>

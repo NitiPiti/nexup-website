@@ -4,13 +4,13 @@ import { Shield, Users } from 'lucide-react'
 
 export function WhySection() {
     return (
-        <section id="why" className="bg-gray-50 py-16 md:py-32 dark:bg-transparent">
-            <div className="mx-auto max-w-3xl lg:max-w-5xl px-6">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+        <section id="why" className="bg-gray-50 py-12 sm:py-16 md:py-24 lg:py-32 dark:bg-transparent">
+            <div className="mx-auto max-w-3xl lg:max-w-5xl px-4 sm:px-6">
+                <div className="text-center mb-10 sm:mb-14 lg:mb-16">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
                         Why Choose NexUp AI?
                     </h2>
-                    <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
                         Experience the power of enterprise-grade AI that transforms your business operations with unmatched security, performance, and reliability.
                     </p>
                 </div>
