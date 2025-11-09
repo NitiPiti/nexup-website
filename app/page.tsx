@@ -13,6 +13,7 @@ import { TestimonialsSection } from "@/components/testimonials-section"
 import { Footer } from "@/components/footer"
 import { ShadowOverlay } from "@/components/ui/shadow-overlay"
 import { useEffect } from "react"
+import ChatEmbedWidget from "@/components/chat-embed-widget"
 
 export default function Home() {
   useEffect(() => {
@@ -53,6 +54,7 @@ export default function Home() {
         {/* <IntegrationsSection /> */}
         <Footer />
       </div>
+      <ChatEmbedWidget />
     </div>
   )
 }
