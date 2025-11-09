@@ -10,6 +10,7 @@ import { TestimonialsSection } from "@/components/testimonials-section"
 import IntegrationsSection from "@/components/integrations-section"
 import { Footer } from "@/components/footer"
 import { ShadowOverlay } from "@/components/ui/shadow-overlay"
+import ChatEmbedWidget from "@/components/chat-embed-widget"
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
         <IntegrationsSection />
         <Footer />
       </div>
+      <ChatEmbedWidget />
     </div>
   )
 }
