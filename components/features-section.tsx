@@ -1,12 +1,10 @@
 "use client"
 
-import { Suspense } from "react"
 import { Card } from "@/components/ui/card"
 import { FlickeringGrid } from "@/components/ui/flickering-grid"
 import { HoverEffect } from "@/components/ui/hover-effect"
 import { SparksCarousel, SparkItem } from "@/components/ui/sparks-carousel"
 import { CheckCircle, Shield, Zap, Users, Globe, BarChart3, Palette, Code, Database, Puzzle, Brain, TrendingUp, Layers } from "lucide-react"
-import Hyperspeed from "@/components/ui/hyperspeed"
 
 export function FeaturesSection() {
   // Convert features to SparkItem format for the carousel
@@ -87,51 +85,6 @@ export function FeaturesSection() {
 
   return (
     <section id="features" className="relative py-12 sm:py-16 lg:py-20 bg-white dark:bg-gray-900 overflow-hidden">
-      {/* Background Animation */}
-      <Suspense fallback={null}>
-        <div className="absolute inset-0 flex items-center justify-center opacity-30 dark:opacity-20">
-          <div className="w-full h-full max-w-4xl mx-auto">
-            <Hyperspeed 
-            effectOptions={{
-              distortion: 'turbulentDistortion',
-              length: 400,
-              roadWidth: 10,
-              islandWidth: 2,
-              lanesPerRoad: 4,
-              fov: 90,
-              fovSpeedUp: 150,
-              speedUp: 0,
-              carLightsFade: 0.4,
-              totalSideLightSticks: 20,
-              lightPairsPerRoadWay: 40,
-              shoulderLinesWidthPercentage: 0.05,
-              brokenLinesWidthPercentage: 0.1,
-              brokenLinesLengthPercentage: 0.5,
-              lightStickWidth: [0.12, 0.5],
-              lightStickHeight: [1.3, 1.7],
-              movingAwaySpeed: [60, 80],
-              movingCloserSpeed: [-120, -160],
-              carLightsLength: [400 * 0.03, 400 * 0.2],
-              carLightsRadius: [0.05, 0.14],
-              carWidthPercentage: [0.3, 0.5],
-              carShiftX: [-0.8, 0.8],
-              carFloorSeparation: [0, 5],
-              colors: {
-                roadColor: 0x080808,
-                islandColor: 0x0a0a0a,
-                background: 0x000000,
-                shoulderLines: 0xffffff,
-                brokenLines: 0xffffff,
-                leftCars: [0x418087, 0x3a7379, 0x4a9ba3],
-                rightCars: [0x418087, 0x3a7379, 0x4a9ba3],
-                sticks: 0x418087
-              }
-            }}
-          />
-          </div>
-        </div>
-      </Suspense>
-      
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 sm:mb-14 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">

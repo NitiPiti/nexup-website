@@ -99,7 +99,7 @@ const ScrollStack = ({
     const scaleEndPositionPx = parsePercentage(scaleEndPosition, containerHeight);
 
     const endElement = useWindowScroll
-      ? document.querySelector('.scroll-stack-end')
+      ? document.querySelector('.scroll-stack-end') as HTMLElement | null
       : scrollerRef.current?.querySelector('.scroll-stack-end') as HTMLElement | null;
 
     const endElementTop = endElement ? getElementOffset(endElement) : 0;
@@ -238,14 +238,10 @@ const ScrollStack = ({
         smoothWheel: true,
         touchMultiplier: 2,
         infinite: false,
-        gestureOrientationHandler: true,
-        normalizeWheel: true,
         wheelMultiplier: 1,
-        touchInertiaMultiplier: 35,
         lerp: 0.1,
         syncTouch: true,
-        syncTouchLerp: 0.075,
-        touchInertia: 0.6
+        syncTouchLerp: 0.075
       });
 
       lenis.on('scroll', handleScroll);
