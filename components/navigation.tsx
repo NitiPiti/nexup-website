@@ -67,7 +67,7 @@ export function Navigation() {
             </div>
             
             <ThemeToggle />
-            <StarButton text="Upgrade to NexUp AI" />
+            <StarButton text="Upgrade to NexUp AI" href="/login" />
           </div>
 
           {/* Mobile Menu Button */}
@@ -113,7 +113,7 @@ export function Navigation() {
                 <ThemeToggle />
               </div>
               <div className="pt-2" onClick={() => setIsMenuOpen(false)}>
-                <StarButton text="Upgrade to NexUp AI" />
+                <StarButton text="Upgrade to NexUp AI" href="/login" />
               </div>
             </div>
           </div>

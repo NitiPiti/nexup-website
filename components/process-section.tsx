@@ -1,8 +1,9 @@
 'use client'
 
-import { useState, KeyboardEvent } from 'react'
+import { useState, KeyboardEvent, Suspense } from 'react'
 import { ArrowRight, Sparkles } from 'lucide-react'
 import { FlowButton } from "@/components/ui/flow-button"
+import { GenerativeArtScene } from "@/components/ui/generative-art-scene"
 
 export function ProcessSection() {
   const [query, setQuery] = useState('')
@@ -46,8 +47,13 @@ export function ProcessSection() {
   ]
 
   return (
-    <section id="process" className="bg-gray-50 dark:bg-gray-900">
-      <div className="py-12 sm:py-16 lg:py-20">
+    <section id="process" className="bg-gray-50 dark:bg-gray-900 relative overflow-hidden">
+      {/* Background Animation */}
+      <Suspense fallback={null}>
+        <GenerativeArtScene />
+      </Suspense>
+      
+      <div className="relative z-10 py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-14 lg:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
