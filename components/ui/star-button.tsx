@@ -1,24 +1,13 @@
 "use client"
 
 import React from "react"
+import Link from "next/link"
 
-const StarButton = ({ text = "Button" }: { text?: string }) => {
-  return (
-    <button
-      className="
-        group relative px-6 sm:px-8 md:px-[35px] py-2.5 sm:py-3 md:py-[12px] 
-        text-sm sm:text-base md:text-[17px] font-medium 
-        text-white 
-        bg-[#418087] 
-        border-[2px] sm:border-[3px] border-[#418087] 
-        rounded-md 
-        shadow-[0_0_0_#4180878c] 
-        transition-all duration-300 ease-in-out 
-        cursor-pointer
-        hover:bg-transparent hover:text-[#418087] hover:shadow-[0_0_25px_#4180878c]
-        active:scale-95
-      "
-    >
+const StarButton = ({ text = "Button", href }: { text?: string; href?: string }) => {
+  const buttonClasses = "group relative px-6 sm:px-8 md:px-[35px] py-2.5 sm:py-3 md:py-[12px] text-sm sm:text-base md:text-[17px] font-medium text-white bg-[#418087] border-[2px] sm:border-[3px] border-[#418087] rounded-md shadow-[0_0_0_#4180878c] transition-all duration-300 ease-in-out cursor-pointer hover:bg-transparent hover:text-[#418087] hover:shadow-[0_0_25px_#4180878c] active:scale-95 inline-flex items-center justify-center"
+
+  const content = (
+    <>
       {text}
 
       {/* Star 1 */}
@@ -98,6 +87,20 @@ const StarButton = ({ text = "Button" }: { text?: string }) => {
       >
         <Star />
       </div>
+    </>
+  )
+
+  if (href) {
+    return (
+      <Link href={href} className={buttonClasses}>
+        {content}
+      </Link>
+    )
+  }
+
+  return (
+    <button className={buttonClasses}>
+      {content}
     </button>
   )
 }

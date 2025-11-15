@@ -36,8 +36,8 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="/#why" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Why</a>
             <a href="/#features" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Features</a>
+            <a href="https://chat.nexupai.com/app" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Demo</a>
             <a href="/pricing" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Pricing</a>
             
             {/* Solutions Dropdown */}
@@ -67,7 +67,7 @@ export function Navigation() {
             </div>
             
             <ThemeToggle />
-            <StarButton text="Upgrade to NexUp AI" />
+            <StarButton text="Upgrade to NexUp AI" href="/login" />
           </div>
 
           {/* Mobile Menu Button */}
@@ -83,8 +83,8 @@ export function Navigation() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200 dark:border-gray-700">
             <div className="flex flex-col space-y-4">
-              <a href="/#why" className="text-base text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Why</a>
               <a href="/#features" className="text-base text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Features</a>
+              <a href="https://chat.nexupai.com/app" target="_blank" rel="noopener noreferrer" className="text-base text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Demo</a>
               <a href="/pricing" className="text-base text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Pricing</a>
               
               {/* Solutions Section */}
@@ -113,7 +113,7 @@ export function Navigation() {
                 <ThemeToggle />
               </div>
               <div className="pt-2" onClick={() => setIsMenuOpen(false)}>
-                <StarButton text="Upgrade to NexUp AI" />
+                <StarButton text="Upgrade to NexUp AI" href="/login" />
               </div>
             </div>
           </div>

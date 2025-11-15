@@ -12,8 +12,8 @@ export function TestimonialsSection() {
       opacity: 1,
       filter: "blur(0px)",
       transition: {
-        delay: i * 0.4,
-        duration: 0.5,
+        delay: i * 0.2,
+        duration: 0.3,
       },
     }),
     hidden: {
@@ -160,7 +160,7 @@ export function TestimonialsSection() {
                 <div className="flex justify-between pt-5">
                   <div>
                     <h2 className=" font-semibold text-xl">Guillermo Rauch</h2>
-                    <p className="">CEO of OdeaoLabs</p>
+                    <p className="">CEO of TechFlow</p>
                   </div>
                   <Image
                     src="https://images.unsplash.com/photo-1563237023-b1e970526dcb?q=80&w=765&auto=format&fit=crop"

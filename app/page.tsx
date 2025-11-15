@@ -3,6 +3,7 @@
 import { Navigation } from "@/components/navigation"
 import { LampDemo } from "@/components/ui/lamp-demo"
 import { HeroSection3D } from "@/components/hero-section-3d"
+import { TransformSupportSection } from "@/components/transform-support-section"
 import { LogosMarquee } from "@/components/logos-marquee"
 import { ProcessSection } from "@/components/process-section"
 import { WhySection } from "@/components/why-section"
@@ -37,6 +38,15 @@ export default function Home() {
       
       <HeroSection3D />
       
+      {/* Client Logos - Right after hero */}
+      <LogosMarquee />
+      
+      {/* From Data to Intelligence Section */}
+      <ProcessSection />
+      
+      {/* Transform Your Support Section */}
+      <TransformSupportSection />
+      
       {/* Background for all sections except hero */}
       <div className="relative">
         <ShadowOverlay 
@@ -45,8 +55,6 @@ export default function Home() {
           noise={{ opacity: 0.1, scale: 1 }}
         />
         
-        <LogosMarquee />
-        <ProcessSection />
         <WhySection />
         <FeaturesSection />
         <ComplianceSection />

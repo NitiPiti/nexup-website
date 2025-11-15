@@ -40,12 +40,12 @@ export function HeroSection3D() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 sm:h-11 rounded-md bg-[#418087] hover:bg-[#3a7379] text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg">
+              <a href="/login" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 sm:h-11 rounded-md bg-[#418087] hover:bg-[#3a7379] text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg">
                 Get Started
-              </button>
-              <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 sm:h-11 rounded-md px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg">
+              </a>
+              <a href="https://chat.nexupai.com/app" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 sm:h-11 rounded-md px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg">
                 See How It Works
-              </button>
+              </a>
             </div>
           </div>
 

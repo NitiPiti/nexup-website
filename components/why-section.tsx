@@ -4,7 +4,7 @@ import { Shield, Users } from 'lucide-react'
 
 export function WhySection() {
     return (
-        <section id="why" className="bg-gray-50 py-12 sm:py-16 md:py-24 lg:py-32 dark:bg-transparent">
+        <section id="why" className="bg-gray-50 pt-6 sm:pt-8 md:pt-10 lg:pt-12 pb-12 sm:pb-16 md:pb-24 lg:pb-32 dark:bg-transparent">
             <div className="mx-auto max-w-3xl lg:max-w-5xl px-4 sm:px-6">
                 <div className="text-center mb-10 sm:mb-14 lg:mb-16">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">

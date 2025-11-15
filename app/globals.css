@@ -87,6 +87,18 @@
   .animate-accordion-up {
     animation: accordion-up 0.2s ease-out;
   }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .bg-grid-white {
+    background-image: 
+      linear-gradient(to right, currentColor 1px, transparent 1px),
+      linear-gradient(to bottom, currentColor 1px, transparent 1px);
+  }
 }
 
 @keyframes accordion-down {
