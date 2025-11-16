@@ -38,7 +38,6 @@ export function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <a href="/#features" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Features</a>
             <a href="https://chat.nexupai.com/app" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Demo</a>
-            <a href="/pricing" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Pricing</a>
             
             {/* Solutions Dropdown */}
             <div className="relative">
@@ -85,7 +84,6 @@ export function Navigation() {
             <div className="flex flex-col space-y-4">
               <a href="/#features" className="text-base text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Features</a>
               <a href="https://chat.nexupai.com/app" target="_blank" rel="noopener noreferrer" className="text-base text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Demo</a>
-              <a href="/pricing" className="text-base text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Pricing</a>
               
               {/* Solutions Section */}
               <div>
