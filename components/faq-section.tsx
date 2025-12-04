@@ -53,13 +53,13 @@ export function FAQSection() {
   ]
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white dark:bg-gray-900" data-faq-section>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Have questions? We have answers. You can also reach out to us at hi@nexup.ai.
           </p>
         </div>
@@ -67,12 +67,12 @@ export function FAQSection() {
         <div className="max-w-4xl mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border border-gray-200 rounded-lg px-6">
+              <AccordionItem key={index} value={`item-${index}`} className="border border-gray-200 dark:border-gray-700 rounded-lg px-6 bg-white dark:bg-gray-800 hover:border-[#418087] dark:hover:border-[#418087] transition-colors">
                 <AccordionTrigger className="text-left hover:no-underline py-6">
-                  <span className="text-lg font-semibold text-gray-900">{faq.question}</span>
+                  <span className="text-lg font-semibold text-gray-900 dark:text-white">{faq.question}</span>
                 </AccordionTrigger>
                 <AccordionContent className="pb-6">
-                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{faq.answer}</p>
                 </AccordionContent>
               </AccordionItem>
             ))}
